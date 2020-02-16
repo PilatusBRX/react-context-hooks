@@ -1,4 +1,5 @@
-import React, { createContext, Component } from 'react';
+import React, { Component, createContext } from 'react';
+
 export const ThemeContext = createContext();
 
 class ThemeContextProvider extends Component {
@@ -7,7 +8,6 @@ class ThemeContextProvider extends Component {
     light: { syntax: '#555', ui: '#ddd', bg: '#eee' },
     dark: { syntax: '#ddd', ui: '#333', bg: '#555' }
   };
-
   toggleTheme = () => {
     this.setState({ isLightTheme: !this.state.isLightTheme });
   };
@@ -21,4 +21,5 @@ class ThemeContextProvider extends Component {
     );
   }
 }
+
 export default ThemeContextProvider;
